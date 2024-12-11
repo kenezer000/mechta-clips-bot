@@ -1,119 +1,69 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechta Clips Bot</title>
     <style>
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(99182610, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/99182610" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
         }
         .button {
-            display: inline-block;
-            padding: 10px 20px;
             margin: 10px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #007bff;
-            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .language {
-            margin: 20px 0;
-        }
-        .instructions {
-            text-align: left;
-            margin: 20px auto;
-            max-width: 600px;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .hidden-button {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            font-size: 10px;
-            padding: 5px 10px;
-            background-color: #ccc;
-            color: #333;
-            border: 1px solid #aaa;
-            border-radius: 3px;
-            opacity: 0.3;
-            transition: opacity 0.3s;
-        }
-        .hidden-button:hover {
-            opacity: 1;
             cursor: pointer;
         }
+        .russian { background-color: violet; }
+        .english { background-color: violet; }
+        .chinese { background-color: violet; position: absolute; bottom: 10px; left: 10px; font-size: 10px; }
+        .telegram { background-color: pink; }
     </style>
-</head>
-<body>
-    <h1>Добро пожаловать в Mechta Clips Bot</h1>
-    <a href="https://t.me/mechta_clips_bot" class="button">Перейти к боту</a>
-    <div class="language">
-        <p>Выберите язык:</p>
-        <button onclick="setLanguage('ru')">Русский</button>
-        <button onclick="setLanguage('en')">English</button>
-    </div>
-    <div class="instructions">
-        <h2>Как пользоваться:</h2>
-        <p><strong>Шаг 1:</strong> Нажмите на кнопку выше, чтобы открыть бот в Telegram.</p>
-        <p><strong>Шаг 2:</strong> Следуйте инструкциям в чате, чтобы загрузить видео или выполнить другую задачу.</p>
-        <p><strong>Шаг 3:</strong> Получите результат прямо в Telegram!</p>
-    </div>
-    <button class="hidden-button" onclick="setLanguage('zh')">中文</button>
-    <script>
-        function setLanguage(lang) {
-            if (lang === 'ru') {
-                document.querySelector('.instructions').innerHTML = `
-                    <h2>Как пользоваться:</h2>
-                    <p><strong>Шаг 1:</strong> Нажмите на кнопку выше, чтобы открыть бот в Telegram.</p>
-                    <p><strong>Шаг 2:</strong> Следуйте инструкциям в чате, чтобы загрузить видео или выполнить другую задачу.</p>
-                    <p><strong>Шаг 3:</strong> Получите результат прямо в Telegram!</p>`;
-            } else if (lang === 'en') {
-                document.querySelector('.instructions').innerHTML = `
-                    <h2>How to Use:</h2>
-                    <p><strong>Step 1:</strong> Click the button above to open the bot in Telegram.</p>
-                    <p><strong>Step 2:</strong> Follow the instructions in the chat to upload a video or perform another task.</p>
-                    <p><strong>Step 3:</strong> Receive the result directly in Telegram!</p>`;
-            } else if (lang === 'zh') {
-                document.querySelector('.instructions').innerHTML = `
-                    <h2>如何使用:</h2>
-                    <p><strong>步骤 1:</strong> 点击上面的按钮打开 Telegram 中的机器人。</p>
-                    <p><strong>步骤 2:</strong> 按照聊天中的指示上传视频或执行其他任务。</p>
-                    <p><strong>步骤 3:</strong> 直接在 Telegram 中接收结果！</p>`;
-            }
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(99182610, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+
+        // Функции для отслеживания событий
+        function trackRussian() {
+            ym(99182610, 'reachGoal', 'russian_click');
+        }
+        function trackEnglish() {
+            ym(99182610, 'reachGoal', 'english_click');
+        }
+        function trackChinese() {
+            ym(99182610, 'reachGoal', 'chinese_click');
         }
     </script>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/99182610" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <button class="button russian" onclick="trackRussian()">Русский</button>
+    <button class="button english" onclick="trackEnglish()">English</button>
+    <button class="button chinese" onclick="trackChinese()">中文</button>
+    <a href="https://t.me/mechta_clips_bot" class="button telegram">Перейти в Telegram</a>
 </body>
 </html>
